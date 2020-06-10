@@ -58,9 +58,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
             {
                 addingToCartList();
 
-                if (state.equals("Order Placed") || state.equals("Order SHipped"))
+                if (state.equals("Order Placed") || state.equals("Order Shipped"))
                 {
-                    Toast.makeText(ProductDetailsActivity.this, "you can ad purchase more products, once your order is shipped or confirmed.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ProductDetailsActivity.this, "you can add purchase more products, once your order is shipped or confirmed.", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
