@@ -12,7 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Buyers.ProductDetailsGuestActivity"></activity>
+        <activity android:name=".Guest.SearchProductsGuestActivity"></activity>
+        <activity android:name=".Guest.GuestHomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Guest.ProductDetailsGuestActivity" />
         <activity android:name=".Admin.AdminCheckNewProductsActivity" />
         <activity android:name=".Admin.AdminHomeActivity" />
         <activity
@@ -29,20 +37,14 @@
         <activity android:name=".Buyers.CartActivity" />
         <activity android:name=".Buyers.ProductDetailsActivity" />
         <activity android:name=".Buyers.SettinsActivity" />
-        <activity
-            android:name=".Buyers.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Buyers.MainActivity" />
         <activity android:name=".Sellers.SellerProductCategoryActivity" />
         <activity android:name=".Sellers.SellerAddNewProductActivity" />
         <activity android:name=".Buyers.RegisterActivity" />
         <activity android:name=".Buyers.LoginActivity" />
-        <activity android:name=".Buyers.MainActivity" />
+        <activity
+            android:name=".Buyers.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
