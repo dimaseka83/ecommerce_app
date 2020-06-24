@@ -50,7 +50,6 @@ public class SellerHomeActivity extends AppCompatActivity
                     startActivity(intentHome);
                     return true;
 
-
                 case R.id.navigation_add:
                     Intent intentCate = new Intent(SellerHomeActivity.this, SellerProductCategoryActivity.class);
                     startActivity(intentCate);

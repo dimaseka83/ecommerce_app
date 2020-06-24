@@ -63,6 +63,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
                 holder.txtProductName.setText(model.getPname());
             }
 
+
             @NonNull
             @Override
             public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)

@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.praktikum.ecommerce.Interface.ItemClickListner;
 import com.android.praktikum.ecommerce.R;
 
+import org.w3c.dom.Text;
+
 public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 {
     public TextView txtproductName, txtProductDescription, txtProductPrice, txtProductStatus;
@@ -24,6 +26,7 @@ public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         txtProductDescription = (TextView) itemView.findViewById(R.id.product_seller_description);
         txtProductPrice = (TextView) itemView.findViewById(R.id.product_seller_price);
         txtProductStatus = (TextView) itemView.findViewById(R.id.seller_product_state);
+
     }
 
     public void setItemClickListener(ItemClickListner listner)

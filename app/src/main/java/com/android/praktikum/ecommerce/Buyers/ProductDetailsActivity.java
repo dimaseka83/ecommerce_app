@@ -33,7 +33,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private Button addToCartButon;
     private ImageView productImage;
     private ElegantNumberButton numberButton;
-    private TextView productPrice, productDescription, productName;
+    private TextView productPrice, productDescription, productName,productSellerName;
     private String productID = "", state = "Normal";
 
     @Override
@@ -48,6 +48,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
         productImage = (ImageView) findViewById(R.id.product_image_details);
         productName = (TextView) findViewById(R.id.product_name_details);
         productDescription = (TextView) findViewById(R.id.product_description_details);
+        productSellerName = (TextView) findViewById(R.id.product_seller_names);
+
         productPrice = (TextView) findViewById(R.id.product_price_details);
 
         getProductDetails(productID);
@@ -99,6 +101,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("time", saveCurrentTime);
         cartMap.put("quantity", numberButton.getNumber());
         cartMap.put("discount", "");
+        cartMap.put("sellerName",productSellerName.getText().toString());
 
         cartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone())
                 .child("Products").child(productID)
@@ -143,6 +146,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     productName.setText(products.getPname());
                     productPrice.setText(products.getPrice());
                     productDescription.setText(products.getDescription());
+                    productSellerName.setText(products.getSellerName());
                     Picasso.get().load(products.getImage()).into(productImage);
                 }
             }

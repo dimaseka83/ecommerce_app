@@ -1,19 +1,7 @@
 package com.android.praktikum.ecommerce.Model;
 
 public class Products {
-    private String pname, description, price, image, category, pid, date, time, productState;
-
-    public Products(String pname, String description, String price, String image, String category, String pid, String date, String time, String productState) {
-        this.pname = pname;
-        this.description = description;
-        this.price = price;
-        this.image = image;
-        this.category = category;
-        this.pid = pid;
-        this.date = date;
-        this.time = time;
-        this.productState = productState;
-    }
+    private String pname, description, price, image, category, pid, date, time, productState, sellerName;
 
     public String getPname() {
         return pname;
@@ -86,6 +74,17 @@ public class Products {
     public void setProductState(String productState) {
         this.productState = productState;
     }
+
+    public String getSellerName() {
+        return sellerName;
+    }
+
+    public void setSellerName(String sellerName) {
+        this.sellerName = sellerName;
+    }
+
+
+
 
     public Products()
     {

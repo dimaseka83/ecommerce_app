@@ -35,4 +35,5 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_guest_home">GuestHomeActivity</string>
+    <string name="title_activity_seller_check_product">SellerCheckProductActivity</string>
 </resources>

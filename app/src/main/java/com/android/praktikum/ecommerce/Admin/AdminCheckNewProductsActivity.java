@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.android.praktikum.ecommerce.Interface.ItemClickListner;
 import com.android.praktikum.ecommerce.Model.Products;
 import com.android.praktikum.ecommerce.R;
 import com.android.praktikum.ecommerce.ViewHolder.ProductViewHolder;
@@ -64,6 +63,7 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
                         holder.txtproductName.setText(model.getPname());
                         holder.txtProductDescription.setText(model.getDescription());
                         holder.txtProductPrice.setText("Price = Rp. " + model.getPrice());
+                        holder.txtSellerName.setText("Seller = "+model.getSellerName());
                         Picasso.get().load(model.getImage()).into(holder.imageView);
 
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +103,7 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
                     @Override
                     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
                     {
-                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout_admin, parent, false);
                         ProductViewHolder holder = new ProductViewHolder(view);
                         return holder;
                     }

@@ -19,7 +19,7 @@ import com.squareup.picasso.Picasso;
 public class ProductDetailsGuestActivity extends AppCompatActivity {
 
     private ImageView productImage;
-    private TextView productPrice, productDescription, productName;
+    private TextView productPrice, productDescription, productName, productSellerName;
     private String productID = "", state = "Normal";
 
     @Override
@@ -33,6 +33,7 @@ public class ProductDetailsGuestActivity extends AppCompatActivity {
         productName = (TextView) findViewById(R.id.product_name_details);
         productDescription = (TextView) findViewById(R.id.product_description_details);
         productPrice = (TextView) findViewById(R.id.product_price_details);
+        productSellerName = (TextView) findViewById(R.id.product_seller_names);
 
 
     }
@@ -58,6 +59,7 @@ public class ProductDetailsGuestActivity extends AppCompatActivity {
                     productName.setText(products.getPname());
                     productPrice.setText(products.getPrice());
                     productDescription.setText(products.getDescription());
+                    productSellerName.setText(products.getSellerName());
                     Picasso.get().load(products.getImage()).into(productImage);
                 }
             }
